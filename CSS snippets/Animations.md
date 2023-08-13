@@ -1,0 +1,10 @@
+### Scale on hover
+
+```css
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+```
