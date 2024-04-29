@@ -3,11 +3,9 @@
 ```bash
 if ! command -v brew &> /dev/null
 then
-  echo "Install Homebrew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "brew does not exist"
 else
-  echo "Update Homebrew"
-  brew update --auto-update
+  echo "brew exists"
 fi
 ```
 

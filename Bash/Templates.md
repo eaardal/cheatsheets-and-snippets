@@ -122,15 +122,15 @@ do
 done
 ```
 
-> `OPTSTRING` is string with list of expected arguments,
->
-> - `h` - check for option `h` **without** parameters; gives error on unsupported options;
-> - `h:` - check for option `h` **with** parameter; gives errors on unsupported options;
-> - `abc` - check for options `a`, `b`, `c`; **gives** errors on unsupported options;
-> - `:abc` - check for options `a`, `b`, `c`; **silences** errors on unsupported options;
->   Notes: In other words, colon in front of options allows you handle the errors in your code. Variable will contain `?` in the case of unsupported option, `:` in the case of missing value.
-> - `OPTARG` - is set to current argument value,
-> - `OPTERR` - indicates if Bash should display error messages.
+`OPTSTRING` is string with list of expected arguments,
+
+- `h` - check for option `h` **without** parameters; gives error on unsupported options;
+- `h:` - check for option `h` **with** parameter; gives errors on unsupported options;
+- `abc` - check for options `a`, `b`, `c`; **gives** errors on unsupported options;
+- `:abc` - check for options `a`, `b`, `c`; **silences** errors on unsupported options;
+  Notes: In other words, colon in front of options allows you handle the errors in your code. Variable will contain `?` in the case of unsupported option, `:` in the case of missing value.
+- `OPTARG` - is set to current argument value,
+- `OPTERR` - indicates if Bash should display error messages.
 
 ### Ensure function argument exists
 

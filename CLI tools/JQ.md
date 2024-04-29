@@ -1,9 +1,7 @@
 ### Flags
 
-```jsx
--r -- Fjerner double quotes rundt strings etter filtrering.
--c -- Compact, resultatet er på 1 linje
-```
+- `-r`: Fjerner double quotes rundt strings etter filtrering.
+- `-c`: Compact, resultatet er på 1 linje
 
 ### Map list of objects to list of comma-separated strings
 

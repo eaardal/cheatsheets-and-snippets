@@ -16,13 +16,9 @@ if [[ ! -f "$FILE" ]]; then echo "file does not exist"; fi
 ### Directory exists check
 
 ```bash
-[ -d "/path/to/dir" ] && echo "Directory /path/to/dir exists."
-
-## OR ##
-[ ! -d "/path/to/dir" ] && echo "Directory /path/to/dir DOES NOT exists."
-
-## OR combine both of them in a single go: ##
-[ -d "/path/to/dir" ] && echo "Directory /path/to/dir exists." || echo "Error: Directory /path/to/dir does not exists.
+[ -d "/path/to/dir" ] && echo "exists"
+[ ! -d "/path/to/dir" ] && echo "does not exist"
+[ -d "/path/to/dir" ] && echo "exists" || echo "does not exist"
 ```
 
 ### Directory is empty check
@@ -44,9 +40,9 @@ find /path/to/dir -type d -empty -exec command1 arg1 {} \;
 - `-f` Returns true if file exists and is a regular file.
 - `-e` Returns true if file exists regardless of type.
 
-```bash
-# https://stackoverflow.com/a/36180056
+https://stackoverflow.com/a/36180056
 
+```bash
 if [ -L ${my_link} ] ; then
    if [ -e ${my_link} ] ; then
       echo "Good link"

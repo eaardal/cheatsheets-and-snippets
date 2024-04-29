@@ -91,37 +91,28 @@ import (
 func main() {
 	path := "/Users/eaardal/.anyver/config.yaml"
 	fmt.Printf("path: %s\n", path)
+	// /Users/eaardal/.anyver/config.yaml
 
-	abs, err := filepath.Abs(path)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	abs, _ := filepath.Abs(path)
 	fmt.Printf("filepath.Abs: %s\n", abs)
+	// /Users/eaardal/.anyver/config.yaml
 
 	fmt.Printf("filepath.Base: %s\n", filepath.Base(path))
+	// config.yaml
 
 	fmt.Printf("filepath.Clean: %s\n", filepath.Clean(path))
+	// /Users/eaardal/.anyver/config.yaml
 
 	fmt.Printf("filepath.Dir: %s\n", filepath.Dir(path))
+	// /Users/eaardal/.anyver
 
 	fmt.Printf("filepath.Ext: %s\n", filepath.Ext(path))
+	// .yaml
 
 	fmt.Printf("filepath.FromSlash: %s\n", filepath.FromSlash(path))
+	// /Users/eaardal/.anyver/config.yaml
 
 	fmt.Printf("filepath.IsAbs: %T\n", filepath.IsAbs(path))
+	// true
 }
-```
-
-Output:
-
-```go
-path: /Users/eaardal/.anyver/config.yaml
-filepath.Abs: /Users/eaardal/.anyver/config.yaml
-filepath.Base: config.yaml
-filepath.Clean: /Users/eaardal/.anyver/config.yaml
-filepath.Dir: /Users/eaardal/.anyver
-filepath.Ext: .yaml
-filepath.FromSlash: /Users/eaardal/.anyver/config.yaml
-filepath.IsAbs: true
 ```

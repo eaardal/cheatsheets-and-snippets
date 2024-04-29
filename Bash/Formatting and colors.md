@@ -22,25 +22,21 @@ $ printf '|%-4s|\n' a ab abc abcd abcde
 # DIFF: 4 characters
 # OK: 2 characters
 
-# To align everything at MISSING+1 space = everything must be indented 8 spaces.
+# To align everything at MISSING+1 space, everything must be indented 8 spaces (7+1).
 # DIFF is printed with %-4s = 8 spaces
 # OK is printed with %-6s = 8 spaces
 # MISSING is printed with %-1s = 8 spaces
 
-printf "OK:%-6s$envyKey matches Envy value $envyValue\n"
-printf "DIFF:%-4s$envyKey value $shellValue differs from Envy value $envyValue\n"
-printf "MISSING:%-1s$envyKey is not an active environment variable\n"
+printf "OK:%-6sBla bla bla\n"
+printf "DIFF:%-4sBla bla bla\n"
+printf "MISSING:%-1sBla bla bla\n"
 
-OK:      OVH_APPLICATION_KEY matches Envy value 4Y4zPjKjedoIVjue
-OK:      OVH_APPLICATION_SECRET matches Envy value CXUhVoF69RxDsQJ5oipiJr72L6vPfddX
-OK:      OVH_CONSUMER_KEY matches Envy value mr08KRs3jJhPdfDAuZZKTiz75iA1eyws
-OK:      OVH_ENDPOINT matches Envy value ovh-eu
-OK:      OS_PASSWORD matches Envy value QsUx8p2pcdYtm2pdCg8y26fRa5KGWQ2D
-DIFF:    AUTH0_DOMAIN value tullogfjas differs from Envy value reklameplattform.tv2norway-stage.auth0.com
-OK:      AUTH0_CLIENT_ID matches Envy value ObqefbiwTYFRh3T6rrHHgd7Hwb9uKyC4
-MISSING: AUTH0_CLIENT_SECRET is not an active environment variable
-OK:      TF_VAR_auth0_client_id matches Envy value ObqefbiwTYFRh3T6rrHHgd7Hwb9uKyC4
-OK:      TF_VAR_auth0_domain matches Envy value reklameplattform.tv2norway-stage.auth0.com
+OK:      Bla bla bla
+DIFF:    Bla bla bla
+OK:      Bla bla bla
+MISSING: Bla bla bla
+OK:      Bla bla bla
+OK:      Bla bla bla
 ```
 
 ### Color output text
